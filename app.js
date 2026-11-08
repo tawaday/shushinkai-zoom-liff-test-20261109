@@ -1,7 +1,7 @@
 'use strict';
 const c=window.CHECK_CONFIG,$=id=>document.getElementById(id);
 let busy=false,initialized=false;
-const messages={STOPPED:'照合試験は停止中です。',REQUEST:'照合要求を確認できません。',AUTH:'LINEの認証を確認できません。試験画面を開き直してください。',FORBIDDEN:'このLINEアカウントは今回の試験対象ではありません。',READ_UNAVAILABLE:'会員情報を読み取れませんでした。管理者に結果をお知らせください。',CHECK_FAILED:'ID054との一致・有効会員状態を確認できませんでした。',INTERNAL:'照合を完了できませんでした。'};
+const messages={STOPPED:'照合試験は停止中です。',REQUEST:'照合要求を確認できません。',AUTH:'LINEの認証を確認できません。試験画面を開き直してください。',FORBIDDEN:'このLINEアカウントは今回の試験対象ではありません。',READ_API_DISABLED:'試験環境でGoogle Sheets APIが利用できません（D01）。',READ_SCOPE:'試験環境のGoogle認可範囲を確認してください（D02）。',READ_AUTH:'試験環境のGoogle認可を確認してください（D03）。',READ_DENIED:'Google側で台帳の読み取りを拒否されました（D04）。',READ_NOT_FOUND:'試験環境から対象台帳を参照できません（D05）。',READ_UNAVAILABLE:'会員情報を読み取れませんでした。管理者に結果をお知らせください。',CHECK_FAILED:'ID054との一致・有効会員状態を確認できませんでした。',INTERNAL:'照合を完了できませんでした。'};
 async function checkSdk_(){
  if(typeof liff!=='undefined')return;
  await new Promise((resolve,reject)=>{const s=document.createElement('script');s.src='https://static.line-scdn.net/liff/edge/2/sdk.js';s.integrity='sha384-1oGcmuvrrA8FN0gjWHb5JnzfrBAcRfLRUY3yykZMm79iIMHAWTxEgEmWJrN6CxLN';s.crossOrigin='anonymous';s.onload=resolve;s.onerror=()=>reject(Error('INTERNAL'));document.head.appendChild(s);});
