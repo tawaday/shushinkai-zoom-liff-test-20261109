@@ -1,0 +1,6 @@
+'use strict';
+const c=window.NY_CONFIG,$=id=>document.getElementById(id);let busy=false;
+async function api(action){const token=liff.getIDToken();if(!token)throw Error('LINEから開き直してください。');const r=await fetch(c.apiUrl,{method:'POST',credentials:'omit',referrerPolicy:'no-referrer',body:new URLSearchParams({action,idToken:token}),signal:AbortSignal.timeout(20000)});if(!r.ok)throw Error('通信できませんでした。');const d=await r.json();if(!d.ok)throw Error(d.code==='FORBIDDEN'?'指定された試験用LINEアカウントで開いてください。':'登録できませんでした。再度お試しください。');return d;}
+function done(){ $('status').textContent='合成会員の登録を確認しました。参加画面へ戻ってください。';$('enroll').hidden=true;$('back').href='https://liff.line.me/'+c.liffId;$('back').hidden=false;}
+$('enroll').onclick=async()=>{if(busy)return;busy=true;$('enroll').disabled=true;$('error').textContent='';try{await api('testRegister');done();}catch(e){$('error').textContent=e.message;}finally{busy=false;$('enroll').disabled=false;}};
+(async()=>{try{if(!/^\d+-[A-Za-z0-9]+$/.test(c.registrationLiffId))throw Error('試験入口は準備中です。');await liff.init({liffId:c.registrationLiffId});if(!liff.isLoggedIn()){liff.login({redirectUri:location.origin+location.pathname});return;}const d=await api('resolve');if(d.registered)done();else{$('status').textContent='LINE認証を確認しました。登録ボタンを押してください。';$('enroll').hidden=false;}}catch(e){$('error').textContent=e.message;}})();
