@@ -1,1 +1,1 @@
-window.CHECK_CONFIG=Object.freeze({enabled:false,liffId:'2012477968-vhsIfsUM',apiUrl:'https://script.google.com/macros/s/AKfycbx7epwRjsQ2HtjVCT5Tq2-DI3LNE8XdpNV7PbE7zKOHFN4KL3T6x5P_fXSAaCAKD-LpdQ/exec'});
+window.CHECK_CONFIG=Object.freeze({enabled:true,liffId:'2012477968-vhsIfsUM',apiUrl:'https://script.google.com/macros/s/AKfycbx7epwRjsQ2HtjVCT5Tq2-DI3LNE8XdpNV7PbE7zKOHFN4KL3T6x5P_fXSAaCAKD-LpdQ/exec'});
