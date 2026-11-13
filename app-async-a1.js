@@ -1,6 +1,6 @@
 'use strict';
 const c=window.CHECK_CONFIG,$=id=>document.getElementById(id);
-$('version').textContent='限定接続試験 A1';
+$('version').textContent='限定接続試験 A2';
 let busy=false,initialized=false;
 const messages={READ_RANGE:'読取範囲の指定を受理されませんでした（D12）。',READ_FIELDS:'応答項目の指定を受理されませんでした（D13）。',READ_TRANSPORT:'読取通信を開始または完了できませんでした（D06）。',READ_REQUEST:'読取要求を受理されませんでした（D07）。',READ_THROTTLED:'読取要求が制限されました（D08）。',READ_UPSTREAM:'読取先で一時的な障害が発生しました（D09）。',READ_HTTP_OTHER:'読取応答を確認できませんでした（D10）。',READ_RESPONSE:'読取結果を解析できませんでした（D11）。',LIMIT:'今回の操作上限（各10回）に達しました。担当者にお知らせください。',BUSY:'処理が重なりました。再試行せず担当者にお知らせください。',L01:'LINE機能を読み込めませんでした（L01）。',L02:'LINE機能を初期化できませんでした（L02）。',C01:'通信応答が正常ではありません（C01）。',C02:'応答を解析できません（C02）。',C03:'照合結果の形式を確認できません（C03）。',C04:'通信要求を完了できません（C04）。',C05:'応答のエラー分類を確認できません（C05）。',S01:'サーバーの開始処理で停止しました（S01）。',S02:'要求の解析処理で停止しました（S02）。',S03:'本人認証処理で停止しました（S03）。',S04:'台帳照合処理で停止しました（S04）。',S05:'設定読取処理で停止しました（S05）。',STOPPED:'現在は試験を受け付けていません。担当者にお知らせください。',REQUEST:'照合要求を確認できません。',AUTH:'LINEの認証を確認できません。試験画面を開き直してください。',FORBIDDEN:'このLINEアカウントは今回の試験対象ではありません。',READ_API_DISABLED:'試験環境でGoogle Sheets APIが利用できません（D01）。',READ_SCOPE:'試験環境のGoogle認可範囲を確認してください（D02）。',READ_AUTH:'試験環境のGoogle認可を確認してください（D03）。',READ_DENIED:'Google側で台帳の読み取りを拒否されました（D04）。',READ_NOT_FOUND:'試験環境から対象台帳を参照できません（D05）。',READ_UNAVAILABLE:'会員情報を読み取れませんでした。管理者に結果をお知らせください。',CHECK_FAILED:'本人との一致・有効会員状態を確認できませんでした。',INTERNAL:'照合を完了できませんでした。',MEETING_UNAVAILABLE:'保存済みの試験会議室を確認できませんでした。'};
 async function checkSdk_(){
