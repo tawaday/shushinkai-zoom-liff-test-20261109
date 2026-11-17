@@ -3,3 +3,5 @@
 .event-date{font-size:1.1rem}.notice{background:#f4f3ed;padding:14px 16px;border-radius:10px}
 #result:empty,#error:empty{display:none}#settings{background:#e7ece7;color:#243d35}
 footer{margin-top:24px;color:#68746b;font-size:.9rem}button:focus-visible{outline:3px solid #b6843c;outline-offset:3px}
+
+#displayName{width:100%;padding:16px 12px;font:600 1.25rem system-ui;color:#243d35;background:#f4f3ed;border:1px solid #bfcbbf;border-radius:10px;user-select:text}summary{cursor:pointer;padding:12px 0;color:#28654d;font-weight:600}#copyStatus{min-height:1.7em}#namePanel ol{padding-left:1.5em}input:focus-visible,summary:focus-visible{outline:3px solid #b6843c;outline-offset:3px}

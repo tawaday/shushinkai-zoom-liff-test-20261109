@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <title>宗心会 オンライン新年会</title>
-<link rel="stylesheet" href="compare.css?v=async-a1">
-<script defer src="config.js?v=async-a4-active1"></script>
-<script defer src="app-async-a4.js"></script>
+<link rel="stylesheet" href="compare.css?v=name-n1">
+<script defer src="config.js?v=name-n1"></script>
+<script defer src="display-name.js?v=name-n1"></script>
+<script defer src="app-name-n1.js"></script>
 </head>
 <body><main>
 <p class="eyebrow">宗心会 · 2027</p>
@@ -15,13 +16,30 @@
 <p class="event-date">2027年1月2日（土）<br><strong>18:30〜21:00（日本時間）</strong></p>
 <p>出入り自由・出欠回答は不要です。</p>
 <p class="badge">対象者限定・接続試験</p>
-<p class="notice">今回は試験用の会議室につながります。ご都合のよい時間にお試しください。受付は11月20日23:59（日本時間）までです。</p>
+<p class="notice">今回は試験用の会議室につながります。ご都合のよい時間にお試しください。表示名の確認試験は11月18日7:01:38（日本時間）までです。本人確認・参加は各2回までです。</p>
 <p id="status" role="status">本人確認後、「Zoomに参加する」を押してください。</p>
 <button id="start" type="button">本人確認をして参加へ進む</button>
 <p>ホスト不在時は「ホストがミーティングを開始するのをお待ちください」まで確認してください。これは待機室への入室とは別の状態です。</p>
 <p id="result" role="status"></p>
+<section id="namePanel" hidden aria-labelledby="nameHeading">
+<h2 id="nameHeading">Zoomで使う表示名</h2>
+<p>受付でお名前が分かるよう、次の表示名をご使用ください。</p>
+<label for="displayName">部内期数　氏名</label>
+<input id="displayName" type="text" readonly autocomplete="off" spellcheck="false">
+<button id="copyName" type="button">表示名をコピーする</button>
+<p id="copyStatus" role="status" aria-live="polite"></p>
+<p>コピーしただけでは、Zoomのお名前は変わりません。</p>
+<ol><li>表示名をコピーします。</li><li>「Zoomに参加する」を押します。</li><li>名前の入力欄が出たら貼り付けて参加します。入力欄が出ない場合は、入室後に変更できます。</li></ol>
+<details><summary>iPhone・Androidで名前を変更する</summary>
+<p><strong>iPhone・Android：</strong>Zoom入室後、「参加者」→自分の名前→「名前の変更」で貼り付けます。</p>
+</details>
+<details><summary>PCで名前を変更する</summary>
+<p><strong>PC：</strong>「参加者」→自分の名前の「詳細」など→「名前の変更」で貼り付けます。</p>
+<p>表示や操作名はZoomのバージョンにより異なります。</p></details>
+<p class="notice">表示名を変更できない場合は、そのままご参加ください。事務局が対応します。お名前を確認させていただくことがあります。</p>
+</section>
 <button id="join" type="button" hidden>Zoomに参加する</button>
-<p id="retryNote" hidden>Zoomが開かない場合は、担当者にお知らせください。本人確認と参加は、それぞれ1人10回までです。</p>
+<p id="retryNote" hidden>Zoomが開かない場合は、担当者にお知らせください。本人確認と参加は、それぞれ1人2回までです。</p>
 <section id="admin" hidden>
 <h2>管理者画面</h2>
 <p>本人確認時の試験会議室の準備状況を確認できます。</p>
