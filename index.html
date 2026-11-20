@@ -9,10 +9,71 @@
 <script defer src="config.js?v=name-n2"></script>
 <script defer src="display-name.js?v=name-n2"></script>
 <script defer src="app-name-n2.js"></script>
+<style>
+
+.soshinkai-newyear-header {width:100%;box-sizing:border-box;background:#762D43;color:#fff;padding:20px 14px 22px;text-align:center;font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo","Noto Sans CJK JP",sans-serif}
+.soshinkai-newyear-header * {box-sizing:border-box}
+.soshinkai-newyear-org {color:#E9CC91;font-size:14px;line-height:1.5;margin:0 0 22px;font-weight:500}
+.soshinkai-newyear-main {display:grid;grid-template-columns:32px minmax(0,1fr) 32px;align-items:center;gap:5px;width:100%}
+.soshinkai-newyear-kadomatsu {font-family:sans-serif;font-size:29px;line-height:1}
+.soshinkai-newyear-titles {min-width:0;text-align:center}
+.soshinkai-newyear-greeting {color:#E9CC91;font-size:36px;font-weight:800;line-height:1.3;letter-spacing:.04em;margin:0 0 12px;white-space:nowrap}
+.soshinkai-newyear-title {color:#fff;font-size:20px;font-weight:700;line-height:1.5;margin:0 0 12px}
+.soshinkai-newyear-year {color:#E9CC91;font-size:23px;letter-spacing:.06em;line-height:1.4;margin:0}
+.soshinkai-newyear-test {color:#E9CC91;font-family:inherit;font-size:14px;margin:22px 0 0;opacity:.9}
+.soshinkai-newyear-subtitle {margin:0;font-size:1.1rem}
+.soshinkai-newyear-greeting,.soshinkai-newyear-year {grid-column:1/-1}
+.soshinkai-newyear-main {row-gap:0}
+.soshinkai-newyear-main .soshinkai-newyear-kadomatsu {margin-bottom:12px}
+@media(max-width:620px){main {padding-inline:12px}}
+@media(max-width:390px){
+ .soshinkai-newyear-header {padding:18px 10px 22px}
+ .soshinkai-newyear-org {font-size:12px}
+ .soshinkai-newyear-greeting {font-size:32px}
+ .soshinkai-newyear-title {font-size:18px}
+ .soshinkai-newyear-year {font-size:22px}
+ .soshinkai-newyear-kadomatsu {font-size:26px}
+}
+body {background:#f5f0e7;color:#40232e}
+main {background:#fffdf8;border:1px solid #E9CC91}
+.soshinkai-newyear-header {border-radius:12px}
+.soshinkai-newyear-subtitle {margin-top:1.2rem}
+.event-date strong,summary {color:#762D43}
+.badge,.notice,#displayName {background:#faf1df;color:#522334}
+#namePanel,#admin {background:#fffaf0;border:1px solid #E9CC91;border-radius:12px;padding:1rem}
+#displayName {border-color:#b99a65}
+footer {color:#664c53}
+button,#settings {background:#762D43;color:white;border:1px solid #E9CC91;cursor:pointer}
+button:not(:disabled):active,#settings:not(:disabled):active {background:#512032;box-shadow:inset 0 2px 4px #321522}
+button:disabled,#settings:disabled {background:#dfd2d4;color:#654d54;border-color:#d0bdc0;opacity:1;cursor:default}
+button:focus-visible,input:focus-visible,summary:focus-visible {outline:3px solid #937031;outline-offset:3px}
+
+@media(max-width:350px){.soshinkai-newyear-main{grid-template-columns:22px minmax(0,1fr) 22px;gap:2px}.soshinkai-newyear-kadomatsu{font-size:22px}}
+
+/* Sizes scale with the invitation width, including inside a narrow LIFF window. */
+.soshinkai-newyear-header {container-type:inline-size;padding:0;border-radius:clamp(10px,2vw,15px)}
+.soshinkai-newyear-org {padding:2.8cqi 2cqi 0;margin:0 0 2.7cqi;font-size:clamp(10px,2.65cqi,16px);line-height:1.4}
+.soshinkai-newyear-main {grid-template-columns:14% minmax(0,1fr) 14%;gap:0}
+.soshinkai-newyear-greeting {font-size:8.25cqi;line-height:1.2;letter-spacing:.01em;margin:0 0 1.5cqi}
+.soshinkai-newyear-title {font-size:4.5cqi;line-height:1.32;margin:0}
+.soshinkai-newyear-main .soshinkai-newyear-kadomatsu {font-size:8.5cqi;line-height:1;margin:0;transform:translateY(-.8cqi)}
+.soshinkai-newyear-year {font-size:5.6cqi;font-weight:600;line-height:1.2;letter-spacing:0;margin:.8cqi 0 0}
+.soshinkai-newyear-test {font-size:clamp(10px,2.8cqi,17px);line-height:1.4;margin:2.9cqi 0 0;padding-bottom:3cqi}
+</style>
 </head>
 <body><main>
-<p class="eyebrow">宗心会 · 2027</p>
-<h1>オンライン新年会</h1>
+<header class="soshinkai-newyear-header">
+  <p class="soshinkai-newyear-org">日本歯科大学新潟生命歯学部 少林寺拳法部OB会</p>
+  <div class="soshinkai-newyear-main">
+<h1 class="soshinkai-newyear-greeting">謹賀新年</h1>
+<span class="soshinkai-newyear-kadomatsu" aria-hidden="true">🎍</span>
+<h2 class="soshinkai-newyear-title">宗心会 オンライン新年会</h2>
+<span class="soshinkai-newyear-kadomatsu" aria-hidden="true">🎍</span>
+<p class="soshinkai-newyear-year">2027 丁未</p>
+</div>
+<p class="soshinkai-newyear-test">054・057限定接続試験</p>
+</header>
+<h2 class="soshinkai-newyear-subtitle">新年会2027</h2>
 <p class="event-date">2027年1月2日（土）<br><strong>18:30〜21:00（日本時間）</strong></p>
 <p>出入り自由・出欠回答は不要です。</p>
 <p class="badge">対象者限定・接続試験</p>
